@@ -39,20 +39,34 @@ I have experimented with the following machine learning models:
 ### Handling Class Imbalance
 Since the dataset has more non-smokers than smokers, i used **SMOTE** (Synthetic Minority Over-sampling Technique) to create synthetic samples for the minority class (smokers). This helps to balance the dataset and improve the model's ability to detect smokers.
 
+The dataset consists of health-related features with a target variable smoking:
+
+0 - Non-smoker (35,237 samples)
+1 - Smoker (20,455 samples)
+After applying SMOTE, the number of smokers was balanced to match the non-smokers.
+
+
+
 ### Results and Analysis
 
 Model Performance Without SMOTE:
 
 Logistic Regression: Accuracy: 75%
+
 XGBoost: Accuracy: 78%
+
 LightGBM: Accuracy: 77%
+
 Random Forest: Accuracy: 82% (Best performance without SMOTE)
 
 ###Model Performance With SMOTE:
 
 Logistic Regression with SMOTE: Accuracy: 74%
+
 XGBoost with SMOTE: Accuracy: 78%
+
 LightGBM with SMOTE: Accuracy: 77%
+
 Random Forest with SMOTE: Accuracy: 82% (Best performance with SMOTE)
 
 Why Random Forest Performed Best:
