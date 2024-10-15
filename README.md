@@ -1,1 +1,1 @@
-# Machine-Learning-for-Smoking-Detection-Using-Health-Attributes
+# Machine Learning for Smoking Detection Using Health Attributes
