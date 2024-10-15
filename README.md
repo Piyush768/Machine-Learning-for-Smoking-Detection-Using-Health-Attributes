@@ -39,25 +39,28 @@ I have experimented with the following machine learning models:
 ### Handling Class Imbalance
 Since the dataset has more non-smokers than smokers, i used **SMOTE** (Synthetic Minority Over-sampling Technique) to create synthetic samples for the minority class (smokers). This helps to balance the dataset and improve the model's ability to detect smokers.
 
-## Model Evaluation
+### Results and Analysis
 
-The models were evaluated using the following metrics:
-- **Precision**: Proportion of true positives out of predicted positives.
-- **Recall**: Proportion of true positives out of actual positives.
-- **F1-Score**: Harmonic mean of precision and recall.
-- **Confusion Matrix**: To visualize performance on each class.
-- **ROC-AUC Score**: Measures the overall performance of the classification model.
+Model Performance Without SMOTE:
 
-## Results
+Logistic Regression: Accuracy: 75%
+XGBoost: Accuracy: 78%
+LightGBM: Accuracy: 77%
+Random Forest: Accuracy: 82% (Best performance without SMOTE)
 
-The **Random Forest Classifier with SMOTE** performed the best overall in this project, showing a balanced improvement in detecting smokers (the minority class) without compromising performance on non-smokers.
+###Model Performance With SMOTE:
 
-### Key Metrics of the Best Model (Random Forest with SMOTE):
-- **Precision (Class 0 - Non-Smoker)**: 0.90
-- **Recall (Class 1 - Smoker)**: 0.84
-- **Accuracy**: 0.82
+Logistic Regression with SMOTE: Accuracy: 74%
+XGBoost with SMOTE: Accuracy: 78%
+LightGBM with SMOTE: Accuracy: 77%
+Random Forest with SMOTE: Accuracy: 82% (Best performance with SMOTE)
 
-This model effectively handled class imbalance, significantly improving recall for smokers, which is crucial for real-world applications where catching smokers is more important.
+Why Random Forest Performed Best:
+
+Balanced Performance: Random Forest achieved the best precision-recall balance across both classes.
+Handling Complexity: As an ensemble model, it effectively handled the complex relationships between health features and smoking status.
+SMOTE Impact: After applying SMOTE, Random Forest improved the recall for smokers while maintaining high accuracy, making it the most effective model for this dataset.
+
 
 ## Installation and Setup
 
