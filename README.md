@@ -59,7 +59,7 @@ LightGBM: Accuracy: 77%
 
 Random Forest: Accuracy: 82% (Best performance without SMOTE)
 
-###Model Performance With SMOTE:
+Model Performance With SMOTE:
 
 Logistic Regression with SMOTE: Accuracy: 74%
 
